@@ -71,3 +71,25 @@ def compress_string_basic(the_string):
 
 # test
 print(compress_string_basic("jjjjjjjjkkkoooooooojjjjjjtttttrr"))
+
+# 4. BONUS CHALLENGE: Palindrome
+#   a. A word, phrase, or sequence that reads the same backward as forward i.e. madam
+#   b. Write code that takes a user input and checks to see if it is a Palindrome and reports the result
+
+# Problem as I understand it:
+# get user input and check to see if it is a palindrome
+# prints true if it is, false otherwise
+# incorporate string_reversed
+
+def is_palindrome():
+    input_string = input("Please enter a word, phrase, or sequence to determine if it is a Palindrome: ")
+    input_string_lower = input_string.lower()
+    reversed_string = string_reversed(input_string_lower)
+    if(input_string_lower == reversed_string):
+        return f"{input_string} is a Palindrome."
+    else:
+        return f"{input_string} is not a Palindrome"
+
+# test
+print(is_palindrome())
+
