@@ -170,7 +170,7 @@ prime_numbers(1, 100)
 
 import math
 
-def fibonacci(): # output 8 numbers in the sequence then , ...
+def fibonacci(): 
     current_number = int(input("Please enter the number you wish to start the Fibonacci sequence at: "))
     current_number = round(current_number) # input validation
     number_of_iterations = int(input("Please enter how many numbers you wish to see: "))
