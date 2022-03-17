@@ -157,3 +157,30 @@ def prime_numbers(lower_bound, upper_bound):
         
 # 6 test
 prime_numbers(1, 100)
+
+# 7. Fibonacci
+#   a. A series of numbers in which each number (Fibonacci number) is the sum of the two preceding numbers. 
+#       The simplest is the series 1, 1, 2, 3, 5, 8, etc.
+#   b. Write a method that does the Fibonacci sequence starting at 1
+#   c. HARDER VERSION: Write a method that does the Fibonacci sequence starting at a number that a user input
+
+# Problem as I understand it:
+# next_number = current_number + previous_number
+# searched for previous number to get  if N is divided by ((1 + sqrt(5)) / 2) and then rounded, the resultant number will be the previous Fibonacci number.
+
+import math
+
+def fibonacci(): # output 8 numbers in the sequence then , ...
+    current_number = int(input("Please enter the number you wish to start the Fibonacci sequence at: "))
+    current_number = round(current_number) # input validation
+    number_of_iterations = int(input("Please enter how many numbers you wish to see: "))
+    number_of_iterations = round(number_of_iterations) # input validation
+    previous_number = round(current_number / ((1 + math.sqrt(5)) / 2)) # getting previous number (thanks google!)
+    next_number = current_number + previous_number 
+    for i in range(number_of_iterations): # print number of times user inputs
+        print(current_number)
+        next_number = current_number + previous_number # calculate next_number
+        previous_number = current_number # current_number will be previous_number in next iteration
+        current_number = next_number # next_number will be current_number in next iteration
+# 7 test
+fibonacci()
